@@ -6,10 +6,10 @@ import { Globe as GlobeIcon } from 'lucide-react';
 import Select from 'react-select';
 import worldData from 'world-atlas/countries-110m.json';
 import { countriesData } from './data/countriesData';
-import CountryDetailsPanel from './CountryDetailsPanel';
 import { Topology } from 'topojson-specification';
 import { centroid } from '@turf/turf';
 import { countryNameMap } from './data/countryNameMap';
+
 
 
 type CountryInfo = typeof countriesData[number];
@@ -20,7 +20,7 @@ function App() {
   const [globeReady, setGlobeReady] = useState(false);
   const [countries, setCountries] = useState<CountryFeature[]>([]);
   const [selectedCountryData, setSelectedCountryData] = useState<CountryInfo | null>(null);
-  const [showDetails, setShowDetails] = useState(false);
+
 
   useEffect(() => {
     const countriesGeo = (feature(
@@ -53,7 +53,6 @@ function App() {
     const handleClickOutside = (e: MouseEvent) => {
       const globeCanvas = document.querySelector('canvas');
       if (globeCanvas && e.target === globeCanvas) {
-        setShowDetails(false);
         setSelectedCountryData(null);
       }
     };
@@ -64,7 +63,6 @@ function App() {
   const handleCountrySelect = (countryName: string) => {
     const countryInfo = countriesData.find(c => c.name.toLowerCase().trim() === countryName.toLowerCase().trim());
     setSelectedCountryData(countryInfo || null);
-    setShowDetails(false);
 
     if (globeRef.current && countryInfo) {
       const countryFeature = countries.find(f => f.properties.name.toLowerCase().trim() === countryInfo.name.toLowerCase().trim());
@@ -102,20 +100,24 @@ function App() {
           className="mb-4"
         />
 
-      {selectedCountryData && !showDetails && (
-  <div className="p-4 bg-gray-700 rounded-lg text-sm text-white">
-    <h3 className="text-lg font-bold">{selectedCountryData.name}</h3>
-    <p><strong>Region:</strong> {selectedCountryData.region}</p>
-    <p className="mt-2"><strong>Contributions:</strong></p>
-    <ul className="ml-4 list-disc">
-      <li>IBRD/IDA: ${selectedCountryData.contributions.IBRD_IDA} M</li>
-      <li>FIFs: ${'FIFs' in selectedCountryData.contributions ? selectedCountryData.contributions.FIFs : 0} M</li>
-    </ul>
-    <p className="mt-2"><strong>Disbursements:</strong> ${selectedCountryData.disbursements} M</p>
-    <a onClick={() => setShowDetails(true)} className="text-blue-400 underline mt-2 inline-block cursor-pointer">View Details</a>
-  </div>
-)}
-
+        {selectedCountryData && (
+          <div className="p-4 bg-gray-700 rounded-lg text-sm text-white">
+            <h3 className="text-lg font-bold">{selectedCountryData.name}</h3>
+            <p><strong>Region:</strong> {selectedCountryData.region}</p>
+            <p className="mt-2"><strong>Contributions:</strong></p>
+            <ul className="ml-4 list-disc">
+              <li>IBRD/IDA: ${selectedCountryData.contributions.IBRD_IDA} M</li>
+              <li>FIFs: ${'FIFs' in selectedCountryData.contributions ? selectedCountryData.contributions.FIFs : 0} M</li>
+            </ul>
+            <p className="mt-2"><strong>Disbursements:</strong> ${selectedCountryData.disbursements} M</p>
+            <a
+              href={`/country/${encodeURIComponent(selectedCountryData.name)}`}
+              className="text-blue-400 underline mt-2 inline-block cursor-pointer"
+            >
+              View Details
+            </a>
+          </div>
+        )}
       </div>
 
       {/* Globe */}
@@ -143,8 +145,6 @@ function App() {
             const matchedCountry = countriesData.find(c => c.name === normalizedName);
             if (matchedCountry) {
               setSelectedCountryData(matchedCountry);
-              setShowDetails(true);
-
               try {
                 const center = centroid(feat as Feature<Geometry>);
                 const [lng, lat] = center.geometry.coordinates;
@@ -156,15 +156,6 @@ function App() {
           }}
         />
       </div>
-
-      {/* Details Panel */}
-      {showDetails && selectedCountryData && (
-        <CountryDetailsPanel
-          country={selectedCountryData.name}
-          region={selectedCountryData.region}
-          onBack={() => setShowDetails(false)}
-        />
-      )}
     </div>
   );
 }

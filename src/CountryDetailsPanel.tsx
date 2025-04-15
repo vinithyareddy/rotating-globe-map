@@ -1,18 +1,15 @@
 import React from 'react';
-import { grantsData } from '../src/data/grantsData';
+import { grantsData } from './data/grantsData';
 import { motion } from 'framer-motion';
+import { useParams, useNavigate } from 'react-router-dom';
 
-interface CountryDetailsPanelProps {
-  country: string;
-  region: string;
-  onBack: () => void;
-}
+const CountryDetailsPanel: React.FC = () => {
+  const { countryName } = useParams();
+  const navigate = useNavigate();
 
-const CountryDetailsPanel: React.FC<CountryDetailsPanelProps> = ({ country, region, onBack }) => {
-  const filteredGrants = grantsData.filter(
-    (grant) =>
-      grant.country.toLowerCase().includes(country.toLowerCase()) &&
-      grant.region.toLowerCase() === region.toLowerCase()
+  const decodedCountry = decodeURIComponent(countryName || '');
+  const filteredGrants = grantsData.filter((grant) =>
+    grant.country.toLowerCase().includes(decodedCountry.toLowerCase())
   );
 
   return (
@@ -24,8 +21,10 @@ const CountryDetailsPanel: React.FC<CountryDetailsPanelProps> = ({ country, regi
       className="absolute top-0 left-0 w-full h-full bg-gray-900 text-white p-6 overflow-y-scroll z-50"
     >
       <div className="flex justify-between items-center mb-4">
-        <h2 className="text-2xl font-bold">Grants in {country}</h2>
-        <button onClick={onBack} className="text-blue-400 hover:underline text-sm">⬅ Back to Map</button>
+        <h2 className="text-2xl font-bold">Grants in {decodedCountry}</h2>
+        <button onClick={() => navigate('/')} className="text-blue-400 hover:underline text-sm">
+          ⬅ Back to Map
+        </button>
       </div>
 
       <table className="w-full text-sm border border-gray-700">

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import App from './App';
-import CountryDetailsPanel from './CountryDetailsPanel';
+import CountryDetailsPanel from './CountryDetailsPanel'; // already correct
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -10,16 +10,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route
-          path="/country/:countryName"
-          element={
-            <CountryDetailsPanel
-              country="SampleCountry"
-              region="SampleRegion"
-              onBack={() => console.log('Back button clicked')}
-            />
-          }
-        />
+        <Route path="/country/:countryName" element={<CountryDetailsPanel />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
