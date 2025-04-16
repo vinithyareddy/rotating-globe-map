@@ -1,3 +1,6 @@
+// Paste this full code in App.tsx
+// NOTE: Ensure Tailwind CSS is set up properly in your project
+
 import { useEffect, useRef, useState } from 'react';
 import Globe, { GlobeMethods } from 'react-globe.gl';
 import { feature } from 'topojson-client';
@@ -23,6 +26,15 @@ function App() {
   const [selectedCountryData, setSelectedCountryData] = useState<CountryInfo | null>(null);
   const [highlightedCountry, setHighlightedCountry] = useState<string | null>(null);
   const [glowColor, setGlowColor] = useState('#ffffff');
+  const [isRotating, setIsRotating] = useState(true);
+
+  useEffect(() => {
+    if (globeReady && globeRef.current) {
+      globeRef.current.controls().autoRotate = isRotating;
+      globeRef.current.controls().autoRotateSpeed = 0.5;
+    }
+  }, [globeReady, isRotating]);
+  
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       setTooltipPos({ x: e.clientX, y: e.clientY });
@@ -30,7 +42,6 @@ function App() {
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
-
 
   useEffect(() => {
     let glowInterval: NodeJS.Timeout;
@@ -51,17 +62,6 @@ function App() {
     ) as { type: string; features: CountryFeature[] }).features;
     setCountries(countriesGeo);
   }, []);
-
-  useEffect(() => {
-    countries.forEach(c => {
-      const geoName = c.properties.name;
-      const normalizedName = countryNameMap[geoName] || geoName;
-      const match = countriesData.find(cd => cd.name === normalizedName);
-      if (!match) {
-        console.warn('❌ No data found for:', geoName, '| Normalized as:', normalizedName);
-      }
-    });
-  }, [countries]);
 
   useEffect(() => {
     if (globeReady && globeRef.current) {
@@ -101,28 +101,38 @@ function App() {
           const center = centroid(countryFeature as Feature<Geometry>);
           const [lng, lat] = center.geometry.coordinates;
           globeRef.current.pointOfView({ lat, lng, altitude: 2.2 }, 1000);
-        } catch (err) {
-          console.warn("Centroid calculation failed. Falling back.", err);
+        } catch {
           globeRef.current.pointOfView({ lat: 20, lng: 78, altitude: 2.2 }, 1000);
         }
+        
       }
     }
   };
 
-const countryOptions = countriesData
-  .map(country => ({
-    value: country.name,
-    label: country.name
-  }))
-  .sort((a, b) => a.label.localeCompare(b.label));
-
+  const countryOptions = countriesData
+    .map(country => ({
+      value: country.name,
+      label: country.name
+    }))
+    .sort((a, b) => a.label.localeCompare(b.label));
 
   return (
-    <div className="flex h-screen bg-gray-900 relative">
-      <div className="w-1/4 bg-gray-800 p-6 overflow-y-auto z-10 relative">
-        <div className="flex items-center gap-2 mb-4">
-          <GlobeIcon className="w-6 h-6 text-blue-400" />
-          <h2 className="text-xl font-bold text-white">Country Insights</h2>
+    <div className="flex h-screen bg-[#0a1c2e] text-white font-sans">
+<div className="w-1/4 bg-[#e5f6ff] p-8 space-y-6 shadow-lg z-10">
+
+<div className="flex items-center space-x-2 text-sm text-white mt-2">
+  <input
+    type="checkbox"
+    checked={isRotating}
+    onChange={() => setIsRotating(!isRotating)}
+    className="form-checkbox accent-blue-500"
+  />
+  <label>Earth rotation</label>
+</div>
+
+<div className="flex items-center gap-3">
+          <GlobeIcon className="w-7 h-7 text-white" />
+          <h2 className="text-2xl font-semibold tracking-tight text-blue-200">Country Insights</h2>
         </div>
         <Select
           options={countryOptions}
@@ -134,22 +144,42 @@ const countryOptions = countriesData
             }
           }}
           isClearable
-          className="mb-4"
+          placeholder="Select a country"
+          className="text-black"
+          styles={{
+            control: (base) => ({
+              ...base,
+              borderRadius: '10px',
+              padding: '4px 6px',
+              backgroundColor: '#1e293b',
+              color: 'white',
+              border: '1px solid #334155'
+            }),
+            singleValue: (base) => ({ ...base, color: 'white' }),
+            menu: (base) => ({ ...base, backgroundColor: '#1e293b', color: 'white' }),
+            option: (base, state) => ({
+              ...base,
+              backgroundColor: state.isFocused ? '#334155' : '#1e293b',
+              color: 'white'
+            })
+          }}
         />
 
         {selectedCountryData && (
-          <div className="p-4 bg-gray-700 rounded-lg text-sm text-white">
+          <div className="bg-[#1e293b] p-4 rounded-lg shadow-inner">
             <h3 className="text-lg font-bold">{selectedCountryData.name}</h3>
-            <p><strong>Region:</strong> {selectedCountryData.region}</p>
-            <p className="mt-2"><strong>Contributions:</strong></p>
-            <ul className="ml-4 list-disc">
-              <li>IBRD/IDA: ${selectedCountryData.contributions.IBRD_IDA} M</li>
-              <li>FIFs: ${'FIFs' in selectedCountryData.contributions ? selectedCountryData.contributions.FIFs : 0} M</li>
-            </ul>
-            <p className="mt-2"><strong>Disbursements:</strong> ${selectedCountryData.disbursements} M</p>
+            <p className="mt-1 text-sm">Region: {selectedCountryData.region}</p>
+            <div className="mt-3 space-y-1 text-sm">
+              <p className="font-medium">Contributions</p>
+              <ul className="ml-4 list-disc">
+                <li>IBRD/IDA: ${selectedCountryData.contributions.IBRD_IDA} M</li>
+                <li>FIFs: ${selectedCountryData.contributions.FIFs} M</li>
+              </ul>
+              <p className="pt-2 font-medium">Disbursements: ${selectedCountryData.disbursements} M</p>
+            </div>
             <a
               href={`/country/${encodeURIComponent(selectedCountryData.name)}`}
-              className="text-blue-400 underline mt-2 inline-block cursor-pointer"
+              className="inline-block mt-4 text-blue-400 hover:text-blue-500 text-sm underline"
             >
               View Details
             </a>
@@ -157,13 +187,18 @@ const countryOptions = countriesData
         )}
       </div>
 
-      <div className="w-3/4 h-full flex items-center justify-center relative z-0">
+      <div className="w-3/4 h-full flex items-center justify-center relative z-0 bg-[#f7fafd]">
+      <div
+    className="rounded-full"
+    style={{
+      boxShadow: '0px 30px 120px rgba(0, 0, 0, 0.5)', // soft, deep shadow
+      borderRadius: '50%',
+    }}
+  >
         <Globe
           ref={globeRef}
           globeImageUrl="//unpkg.com/three-globe/example/img/earth-day.jpg"
-               backgroundColor="rgba(0, 100, 200, 0.15)"
-      
-         
+          backgroundColor="#e3f4fe"
           onGlobeReady={() => setGlobeReady(true)}
           polygonsData={countries}
           polygonCapColor={(obj: object) => {
@@ -171,8 +206,22 @@ const countryOptions = countriesData
             const geoName = feat.properties.name;
             const normalizedName = countryNameMap[geoName] || geoName;
             const countryData = countriesData.find(c => c.name === normalizedName);
-            return countryData ? countryData.color : 'rgba(255,255,255,0.05)';
+            return countryData ? countryData.color : '#ffffff';
           }}
+          polygonSideColor={() => 'rgba(0,0,0,0.1)'}
+          polygonStrokeColor={(obj: object) => {
+            const feat = obj as CountryFeature;
+            const geoName = feat.properties.name;
+            const normalizedName = countryNameMap[geoName] || geoName;
+            return highlightedCountry === normalizedName ? glowColor : '#2c3e50';
+          }}
+          polygonAltitude={(obj: object) => {
+            const feat = obj as CountryFeature;
+            const geoName = feat.properties.name;
+            const normalizedName = countryNameMap[geoName] || geoName;
+            return highlightedCountry === normalizedName ? 0.03 : 0.008;
+          }}
+          polygonsTransitionDuration={300}
           onPolygonHover={(feat) => {
             if (feat) {
               const geoName = (feat as CountryFeature).properties.name;
@@ -185,23 +234,6 @@ const countryOptions = countriesData
               setHoveredCountry(null);
             }
           }}
-          
-          
-          
-          polygonStrokeColor={(obj: object) => {
-            const feat = obj as CountryFeature;
-            const geoName = feat.properties.name;
-            const normalizedName = countryNameMap[geoName] || geoName;
-            return highlightedCountry === normalizedName ? glowColor : 'rgba(20, 20, 20, 0.7)';
-          }}
-          polygonAltitude={(obj: object) => {
-            const feat = obj as CountryFeature;
-            const geoName = feat.properties.name;
-            const normalizedName = countryNameMap[geoName] || geoName;
-            return highlightedCountry === normalizedName ? 0.03 : 0.007;
-          }}
-          polygonSideColor={() => 'rgba(0, 100, 200, 0.15)'}
-          polygonsTransitionDuration={300}
           onPolygonClick={(feat) => {
             const geoName = (feat as CountryFeature).properties.name;
             const normalizedName = countryNameMap[geoName] || geoName;
@@ -223,29 +255,17 @@ const countryOptions = countriesData
           <div
             className="fixed bg-white text-gray-800 px-3 py-1 rounded shadow text-sm z-50 pointer-events-none"
             style={{
-              left: tooltipPos.x + 10,
-              top: tooltipPos.y + 10
+              left: tooltipPos.x + 12,
+              top: tooltipPos.y + 12,
+              whiteSpace: 'nowrap',
+              transition: 'opacity 0.1s ease'
             }}
           >
             {hoveredCountry}
           </div>
         )}
-        {hoveredCountry && (
-  <div
-    className="absolute bg-white text-gray-800 px-3 py-1 rounded shadow text-sm z-50 pointer-events-none"
-    style={{
-      left: tooltipPos.x + 12,
-      top: tooltipPos.y + 12,
-      position: 'fixed',
-      whiteSpace: 'nowrap',
-      transition: 'opacity 0.1s ease'
-    }}
-  >
-    {hoveredCountry}
-  </div>
-)}
-
       </div>
+    </div>
     </div>
   );
 }
