@@ -14,19 +14,30 @@ type CountryInfo = typeof countriesData[number];
 type CountryFeature = Feature<Geometry, { name: string; centroid?: { lat: number; lng: number } }>;
 
 function App() {
+  const [hoveredCountry, setHoveredCountry] = useState<string | null>(null);
+  const [tooltipPos, setTooltipPos] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
+
   const globeRef = useRef<GlobeMethods | undefined>(undefined);
   const [globeReady, setGlobeReady] = useState(false);
   const [countries, setCountries] = useState<CountryFeature[]>([]);
   const [selectedCountryData, setSelectedCountryData] = useState<CountryInfo | null>(null);
   const [highlightedCountry, setHighlightedCountry] = useState<string | null>(null);
   const [glowColor, setGlowColor] = useState('#ffffff');
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      setTooltipPos({ x: e.clientX, y: e.clientY });
+    };
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+
 
   useEffect(() => {
     let glowInterval: NodeJS.Timeout;
     if (highlightedCountry) {
       let toggle = false;
       glowInterval = setInterval(() => {
-        setGlowColor(toggle ? '#ffffff' : '#38bdf8'); // white to Tailwind's sky-400
+        setGlowColor(toggle ? '#ffffff' : '#38bdf8');
         toggle = !toggle;
       }, 600);
     }
@@ -98,23 +109,31 @@ function App() {
     }
   };
 
-  const countryOptions = countriesData.map(country => ({
+const countryOptions = countriesData
+  .map(country => ({
     value: country.name,
     label: country.name
-  }));
+  }))
+  .sort((a, b) => a.label.localeCompare(b.label));
+
 
   return (
     <div className="flex h-screen bg-gray-900 relative">
-      {/* Sidebar */}
       <div className="w-1/4 bg-gray-800 p-6 overflow-y-auto z-10 relative">
         <div className="flex items-center gap-2 mb-4">
           <GlobeIcon className="w-6 h-6 text-blue-400" />
           <h2 className="text-xl font-bold text-white">Country Insights</h2>
         </div>
-
         <Select
           options={countryOptions}
-          onChange={(selected) => handleCountrySelect(selected?.value || '')}
+          onChange={(selected) => {
+            if (selected) {
+              handleCountrySelect(selected.value);
+            } else {
+              setSelectedCountryData(null);
+            }
+          }}
+          isClearable
           className="mb-4"
         />
 
@@ -138,58 +157,93 @@ function App() {
         )}
       </div>
 
-      {/* Globe */}
       <div className="w-3/4 h-full flex items-center justify-center relative z-0">
-      <Globe
-  ref={globeRef}
-  globeImageUrl="//unpkg.com/three-globe/example/img/earth-day.jpg"
-  backgroundColor="rgba(173, 216, 240, 1)"
-  onGlobeReady={() => setGlobeReady(true)}
-  polygonsData={countries}
-  
-  polygonCapColor={(obj: object) => {
-    const feat = obj as CountryFeature;
-    const geoName = feat.properties.name;
-    const normalizedName = countryNameMap[geoName] || geoName;
-    const countryData = countriesData.find(c => c.name === normalizedName);
-    return countryData ? countryData.color : 'rgba(255,255,255,0.05)';
-  }}
-
-  polygonStrokeColor={(obj: object) => {
-    const feat = obj as CountryFeature;
-    const geoName = feat.properties.name;
-    const normalizedName = countryNameMap[geoName] || geoName;
-    return highlightedCountry === normalizedName ? glowColor : 'rgba(20, 20, 20, 0.7)';
-  }}
-
-  polygonAltitude={(obj: object) => {
-    const feat = obj as CountryFeature;
-    const geoName = feat.properties.name;
-    const normalizedName = countryNameMap[geoName] || geoName;
-    return highlightedCountry === normalizedName ? 0.03 : 0.007;
-  }}
-
-  polygonSideColor={() => 'rgba(0, 100, 200, 0.15)'}
-  polygonsTransitionDuration={300}
-
-  onPolygonClick={(feat) => {
-    const geoName = (feat as CountryFeature).properties.name;
-    const normalizedName = countryNameMap[geoName] || geoName;
-    const matchedCountry = countriesData.find(c => c.name === normalizedName);
-    if (matchedCountry) {
-      setSelectedCountryData(matchedCountry);
-      handleCountryHighlight(matchedCountry.name);
-      try {
-        const center = centroid(feat as Feature<Geometry>);
-        const [lng, lat] = center.geometry.coordinates;
-        globeRef.current?.pointOfView({ lat, lng, altitude: 2.2 }, 1000);
-      } catch (err) {
-        console.warn("Polygon centroid error:", err);
-      }
-    }
-  }}
-/>
-
+        <Globe
+          ref={globeRef}
+          globeImageUrl="//unpkg.com/three-globe/example/img/earth-day.jpg"
+               backgroundColor="rgba(0, 100, 200, 0.15)"
+      
+         
+          onGlobeReady={() => setGlobeReady(true)}
+          polygonsData={countries}
+          polygonCapColor={(obj: object) => {
+            const feat = obj as CountryFeature;
+            const geoName = feat.properties.name;
+            const normalizedName = countryNameMap[geoName] || geoName;
+            const countryData = countriesData.find(c => c.name === normalizedName);
+            return countryData ? countryData.color : 'rgba(255,255,255,0.05)';
+          }}
+          onPolygonHover={(feat) => {
+            if (feat) {
+              const geoName = (feat as CountryFeature).properties.name;
+              const normalizedName = countryNameMap[geoName] || geoName;
+              const match = countriesData.find(c => c.name === normalizedName);
+              if (match) {
+                setHoveredCountry(`${match.name} (${match.region})`);
+              }
+            } else {
+              setHoveredCountry(null);
+            }
+          }}
+          
+          
+          
+          polygonStrokeColor={(obj: object) => {
+            const feat = obj as CountryFeature;
+            const geoName = feat.properties.name;
+            const normalizedName = countryNameMap[geoName] || geoName;
+            return highlightedCountry === normalizedName ? glowColor : 'rgba(20, 20, 20, 0.7)';
+          }}
+          polygonAltitude={(obj: object) => {
+            const feat = obj as CountryFeature;
+            const geoName = feat.properties.name;
+            const normalizedName = countryNameMap[geoName] || geoName;
+            return highlightedCountry === normalizedName ? 0.03 : 0.007;
+          }}
+          polygonSideColor={() => 'rgba(0, 100, 200, 0.15)'}
+          polygonsTransitionDuration={300}
+          onPolygonClick={(feat) => {
+            const geoName = (feat as CountryFeature).properties.name;
+            const normalizedName = countryNameMap[geoName] || geoName;
+            const matchedCountry = countriesData.find(c => c.name === normalizedName);
+            if (matchedCountry) {
+              setSelectedCountryData(matchedCountry);
+              handleCountryHighlight(matchedCountry.name);
+              try {
+                const center = centroid(feat as Feature<Geometry>);
+                const [lng, lat] = center.geometry.coordinates;
+                globeRef.current?.pointOfView({ lat, lng, altitude: 2.2 }, 1000);
+              } catch (err) {
+                console.warn("Polygon centroid error:", err);
+              }
+            }
+          }}
+        />
+        {hoveredCountry && (
+          <div
+            className="fixed bg-white text-gray-800 px-3 py-1 rounded shadow text-sm z-50 pointer-events-none"
+            style={{
+              left: tooltipPos.x + 10,
+              top: tooltipPos.y + 10
+            }}
+          >
+            {hoveredCountry}
+          </div>
+        )}
+        {hoveredCountry && (
+  <div
+    className="absolute bg-white text-gray-800 px-3 py-1 rounded shadow text-sm z-50 pointer-events-none"
+    style={{
+      left: tooltipPos.x + 12,
+      top: tooltipPos.y + 12,
+      position: 'fixed',
+      whiteSpace: 'nowrap',
+      transition: 'opacity 0.1s ease'
+    }}
+  >
+    {hoveredCountry}
+  </div>
+)}
 
       </div>
     </div>
