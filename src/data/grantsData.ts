@@ -1,24 +1,24 @@
 export const grantsData = [
     {
       country: "Vietnam",
-      region: "EAP",
+      region: "region 3",
     },
     {
       country: "Kenya",
-      region: "AFR",
+      region: "region 4",
     },
     {
       country: "Mexico",
-      region: "LAC",
+      region: "region 1",
 
     },
     {
       country: "Colombia",
-      region: "LAC",
+      region: "region 1",
     },
     {
-      country: "Global",
-      region: "Global",
+      country: "region ",
+      region: "region ",
 
     },
     {
@@ -27,48 +27,48 @@ export const grantsData = [
     },
     {
       country: "Lebanon",
-      region: "MENA",
+      region: "region 2",
     },
     {
       country: "Cambodia, China, Indonesia, Korea, Lao PDR, Malaysia, Mongolia, Myanmar, Philippines, Thailand, Vietnam",
-      region: "EAP",
+      region: "region 3",
     },
     {
-      country: "Global",
-      region: "Global",
+      country: "region ",
+      region: "region ",
     },
     {
       country: "Algeria, Bangladesh, Bulgaria, Indonesia, Mongolia, Romania, Vietnam",
-      region: "Global",
+      region: "region ",
     },
     {
       country: "Vietnam",
-      region: "EAP",
+      region: "region 3",
     },
     {
-      country: "21 African countries participating in PASET",  
-      region: "AFR",
+      country: "21 region 4ican countries participating in PASET",  
+      region: "region 4",
     },
     {
       country: "Uganda",
-      region: "AFR",
+      region: "region 4",
     },
     {
       country: "Targeting policy makers in 15 countries",
-      region: "EAP",
+      region: "region 3",
     },
     {
       country: "Myanmar, Rwanda, Sri Lanka, Trinidad & Tobago",
-      region: "Global",
+      region: "region ",
     },
     {
       country: "Belarus",
-      region: "ECA",
+      region: "region 5",
     },
   //   {
   //     country: "Philippines, Serbia, Zambia",
   //     grantName: "Government Cloud Infrastructure and Action Plan for Developing Countries",
-  //     region: "Global",
+  //     region: "region ",
   //     trustee: "TF072053",
   //     id: "P155843",
   //     execution: "Bank Executed (BE)",
@@ -80,7 +80,7 @@ export const grantsData = [
   //   {
   //     country: "Kenya",
   //     grantName: "Flood Early Warning System for Kenya Water Security and Climate Resilience (B/E)",
-  //     region: "AFR",
+  //     region: "region 4",
   //     trustee: "TF072053",
   //     id: "P117635",
   //     execution: "Bank Executed (BE)",
@@ -92,7 +92,7 @@ export const grantsData = [
   //   {
   //     country: "Jamaica",
   //     grantName: "Youth Employment in Animation Industry in Jamaica",
-  //     region: "LAC",
+  //     region: "region 1",
   //     trustee: "TF072053",
   //     id: "P148013",
   //     execution: "Bank Executed (BE)",
@@ -102,9 +102,9 @@ export const grantsData = [
   //     disbursement: 570457.4
   //   },
   //   {
-  //     country: "Focused primarily on Central Asia and secondarily on Africa ",
+  //     country: "Focused primarily on Central Asia and secondarily on region 4ica ",
   //     grantName: "Smart Nation Action Plans to Catalyze Digital Transformation",
-  //     region: "Global",
+  //     region: "region ",
   //     trustee: "TF072053",
   //     id: "P155416",
   //     execution: "Bank Executed (BE)",
@@ -116,7 +116,7 @@ export const grantsData = [
   //   {
   //     country: "Tunisia",
   //     grantName: "Feasibility and sustainability of a public-private partnership (PPP) approach to bring ultrafast broadband (UFB) and enhance local skills in a secondary city of Tunisia",
-  //     region: "MENA",
+  //     region: "region 2",
   //     trustee: "TF072053",
   //     id: "P158114",
   //     execution: "Bank Executed (BE)",
@@ -128,7 +128,7 @@ export const grantsData = [
   //   {
   //     country: "Kenya",
   //     grantName: "Flood Early Warning System for Kenya Water Security and Climate Resilience (R/E)",
-  //     region: "AFR",
+  //     region: "region 4",
   //     trustee: "TF072053",
   //     id: "P117635",
   //     execution: "Hybrid (RE)",
@@ -152,7 +152,7 @@ export const grantsData = [
   //   {
   //     country: "Mauritania",
   //     grantName: "Korea-World Bank Group Partnership Facility: Green Nouadhibou",
-  //     region: "AFR",
+  //     region: "region 4",
   //     trustee: "TF072053",
   //     id: "IFC-00600598",
   //     execution: "Bank Executed (BE)",
@@ -162,9 +162,9 @@ export const grantsData = [
   //     disbursement: 299868.72
   //   },
   //   {
-  //     country: "Global",
+  //     country: "region ",
   //     grantName: "East Asia and Pacific: Strengthening CRVS and national ID",
-  //     region: "EAP",
+  //     region: "region 3",
   //     trustee: "TF072053",
   //     id: "P159141",
   //     execution: "Bank Executed (BE)",
@@ -176,7 +176,7 @@ export const grantsData = [
   //   {
   //     country: "Armenia, Dominican Republic, Malawi, Malaysia, Tanzania, plus 8 other countries.",
   //     grantName: "The practice of Universal Health Coverage in Developing Countries",
-  //     region: "Global",
+  //     region: "region ",
   //     trustee: "TF072053",
   //     id: "P159142",
   //     execution: "Bank Executed (BE)",
@@ -188,7 +188,7 @@ export const grantsData = [
   //   {
   //     country: "Bangladesh, India, Sri Lanka, Tunisia",
   //     grantName: "Development of ICT-based Smart City Action Plans and Project Implementation Support",
-  //     region: "Global",
+  //     region: "region ",
   //     trustee: "TF072053",
   //     id: "P146716",
   //     execution: "Bank Executed (BE)",
@@ -200,7 +200,7 @@ export const grantsData = [
   //   {
   //     country: "Colombia, Peru",
   //     grantName: "Strengthening Health Information Systems (including health care Atlas in Colombia)",
-  //     region: "LAC",
+  //     region: "region 1",
   //     trustee: "TF072053",
   //     id: "P159143",
   //     execution: "Bank Executed (BE)",
@@ -224,7 +224,7 @@ export const grantsData = [
   //   {
   //     country: "Haiti",
   //     grantName: "Korea dloHaiti Advisory - Haiti Access to Water",
-  //     region: "LAC",
+  //     region: "region 1",
   //     trustee: "TF072053",
   //     id: "IFC-00600982",
   //     execution: "Bank Executed (BE)",
@@ -236,7 +236,7 @@ export const grantsData = [
   //   {
   //     country: "Bangladesh, Myanmar",
   //     grantName: "Standard Framework for Deployment of ICT-based Transport Systems in Developing Countries",
-  //     region: "Global",
+  //     region: "region ",
   //     trustee: "TF072053",
   //     id: "P159927",
   //     execution: "Bank Executed (BE)",
@@ -247,8 +247,8 @@ export const grantsData = [
   //   },
   //   {
   //     country: "Ethiopia, Zambia, Myanmar, Philippines",
-  //     grantName: "Assistance for Trade Facilitation Reforms Implementation in Sub-Saharan Africa, South Asia, East Asia and the Pacific",
-  //     region: "Global",
+  //     grantName: "Assistance for Trade Facilitation Reforms Implementation in Sub-Saharan region 4ica, South Asia, East Asia and the Pacific",
+  //     region: "region ",
   //     trustee: "TF072053",
   //     id: "P163253",
   //     execution: "Bank Executed (BE)",
@@ -260,7 +260,7 @@ export const grantsData = [
   //   {
   //     country: "Vietnam",
   //     grantName: "Enhancing Teacher Education in Vietnam",
-  //     region: "EAP",
+  //     region: "region 3",
   //     trustee: "TF072053",
   //     id: "P150060",
   //     execution: "Bank Executed (BE)",
@@ -272,7 +272,7 @@ export const grantsData = [
   //   {
   //     country: "Uganda",
   //     grantName: "Korea / World Bank ICT for Agriculture Initiative",
-  //     region: "AFR",
+  //     region: "region 4",
   //     trustee: "TF072053",
   //     id: "P145037",
   //     execution: "Bank Executed (BE)",
@@ -282,9 +282,9 @@ export const grantsData = [
   //     disbursement: 749969.18
   //   },
   //   {
-  //     country: "21 African countries participating in PASET",
-  //     grantName: "Leveraging Korean Knowledge and Experience to Strengthen Capacity in Applied Sciences, Engineering and Technology in sub-Saharan Africa",
-  //     region: "AFR",
+  //     country: "21 region 4ican countries participating in PASET",
+  //     grantName: "Leveraging Korean Knowledge and Experience to Strengthen Capacity in Applied Sciences, Engineering and Technology in sub-Saharan region 4ica",
+  //     region: "region 4",
   //     trustee: "TF072053",
   //     id: "P151076",
   //     execution: "Bank Executed (BE)",
@@ -296,7 +296,7 @@ export const grantsData = [
   //   {
   //     country: "India, Vietnam",
   //     grantName: "IOT in Agriculture- Sensors application for irrigation efficiency",
-  //     region: "EAP",
+  //     region: "region 3",
   //     trustee: "TF072053",
   //     id: "P161216",
   //     execution: "Bank Executed (BE)",
@@ -308,7 +308,7 @@ export const grantsData = [
   //   {
   //     country: "Myanmar",
   //     grantName: "Expanding Finance to Smallholder Farmers through the Utilization of Big Data from Mobile Technology",
-  //     region: "Global",
+  //     region: "region ",
   //     trustee: "TF072053",
   //     id: "P161309",
   //     execution: "Bank Executed (BE)",
@@ -319,8 +319,8 @@ export const grantsData = [
   //   },
   //   {
   //     country: "Albania, Kazakhstan, Moldova",
-  //     grantName: "Improving Workforce Training in ECA",
-  //     region: "ECA",
+  //     grantName: "Improving Workforce Training in region 5",
+  //     region: "region 5",
   //     trustee: "TF072053",
   //     id: "P161517",
   //     execution: "Bank Executed (BE)",
@@ -332,7 +332,7 @@ export const grantsData = [
   //   {
   //     country: "Belarus, Ukraine",
   //     grantName: "ICT Industry Development in Belarus",
-  //     region: "ECA",
+  //     region: "region 5",
   //     trustee: "TF072053",
   //     id: "P155741",
   //     execution: "Bank Executed (BE)",
@@ -344,7 +344,7 @@ export const grantsData = [
   //   {
   //     country: "Bosnia and Herzegovina, Croatia",
   //     grantName: "Building a Transport Data Management System to Benchmark Corridor Performance",
-  //     region: "ECA",
+  //     region: "region 5",
   //     trustee: "TF072053",
   //     id: "P167451",
   //     execution: "Bank Executed (BE)",
@@ -356,7 +356,7 @@ export const grantsData = [
   //   {
   //     country: "Kenya",
   //     grantName: "Kenya_KePSIE_KWPF",
-  //     region: "AFR",
+  //     region: "region 4",
   //     trustee: "TF072053",
   //     id: "P149879",
   //     execution: "Bank Executed (BE)",
@@ -380,7 +380,7 @@ export const grantsData = [
   //   {
   //     country: "Bolivia, Brazil, Chile, Colombia, Costa Rica, Mexico, Peru ",
   //     grantName: "Right to Health and Universal Health Coverage: Support to the SaluDerecho Initiative",
-  //     region: "LAC",
+  //     region: "region 1",
   //     trustee: "TF072053",
   //     id: "P159143",
   //     execution: "Bank Executed (BE)",
@@ -390,9 +390,9 @@ export const grantsData = [
   //     disbursement: 599592.74
   //   },
   //   {
-  //     country: "Global",
-  //     grantName: "Global Cyber Security Capacity Building Program",
-  //     region: "Global",
+  //     country: "region ",
+  //     grantName: "region  Cyber Security Capacity Building Program",
+  //     region: "region ",
   //     trustee: "TF072053",
   //     id: "P161667",
   //     execution: "Bank Executed (BE)",
@@ -404,7 +404,7 @@ export const grantsData = [
   //   {
   //     country: "Indonesia, Tunisia, Kyrgyzstan, Colombia, Tanzania",
   //     grantName: "ICT-based Land Management Systems",
-  //     region: "Global",
+  //     region: "region ",
   //     trustee: "TF072053",
   //     id: "P162375",
   //     execution: "Bank Executed (BE)",
@@ -416,7 +416,7 @@ export const grantsData = [
   //   {
   //     country: "Uzbekistan",
   //     grantName: "Support to the Land Administration and Geospatial System Modernization",
-  //     region: "ECA",
+  //     region: "region 5",
   //     trustee: "TF072053",
   //     id: "P161618",
   //     execution: "Hybrid (BE)",
@@ -428,7 +428,7 @@ export const grantsData = [
   //   {
   //     country: "Cambodia, Philippines, Vietnam",
   //     grantName: "Health insurance data analytics",
-  //     region: "EAP",
+  //     region: "region 3",
   //     trustee: "TF072053",
   //     id: "P162694",
   //     execution: "Bank Executed (BE)",
@@ -440,7 +440,7 @@ export const grantsData = [
   //   {
   //     country: "Kiribati, Vanuatu, Tonga, Samoa, Federated States of Micronesia and Solomon Islands",
   //     grantName: "Pacific Islands CRVS and ID Management",
-  //     region: "EAP",
+  //     region: "region 3",
   //     trustee: "TF072053",
   //     id: "P161926",
   //     execution: "Bank Executed (BE)",
@@ -452,7 +452,7 @@ export const grantsData = [
   //   {
   //     country: "Uzbekistan",
   //     grantName: "Support to Land Administration and Geospatial System Modernization",
-  //     region: "ECA",
+  //     region: "region 5",
   //     trustee: "TF072053",
   //     id: "P161618",
   //     execution: "Hybrid (RE)",
@@ -463,8 +463,8 @@ export const grantsData = [
   //   },
   //   {
   //     country: "Burkina Faso, Chad, Cote d’Ivoire, Gabon, Mali, Nigeria, Kenya, Senegal, Rwanda, South Sudan and Uganda",
-  //     grantName: "Smart Africa Alliance/Korea Partnership",
-  //     region: "AFR",
+  //     grantName: "Smart region 4ica Alliance/Korea Partnership",
+  //     region: "region 4",
   //     trustee: "TF072053",
   //     id: "P162044",
   //     execution: "Hybrid (RE)",
@@ -475,8 +475,8 @@ export const grantsData = [
   //   },
   //   {
   //     country: "Burkina Faso, Chad, Cote d’Ivoire, Gabon, Mali, Nigeria, Kenya, Senegal, Rwanda, South Sudan and Uganda",
-  //     grantName: "Smart Africa Alliance/Korea Partnership",
-  //     region: "AFR",
+  //     grantName: "Smart region 4ica Alliance/Korea Partnership",
+  //     region: "region 4",
   //     trustee: "TF072053",
   //     id: "P162044",
   //     execution: "Hybrid (BE)",
@@ -487,8 +487,8 @@ export const grantsData = [
   //   },
   //   {
   //     country: "Ethiopia, Ghana, Kenya ",
-  //     grantName: "Enhancing NCD Prevention and Control in Africa",
-  //     region: "AFR",
+  //     grantName: "Enhancing NCD Prevention and Control in region 4ica",
+  //     region: "region 4",
   //     trustee: "TF072053",
   //     id: "P161927",
   //     execution: "Bank Executed (BE)",
@@ -498,9 +498,9 @@ export const grantsData = [
   //     disbursement: 599912.29
   //   },
   //   {
-  //     country: "Global",
+  //     country: "region ",
   //     grantName: "Support on Digital Switchover in developing countries",
-  //     region: "Global",
+  //     region: "region ",
   //     trustee: "TF072713",
   //     id: "P166535",
   //     execution: "Bank Executed (BE)",
@@ -511,8 +511,8 @@ export const grantsData = [
   //   },
   //   {
   //     country: "Indonesia, Myanmar, Philippines, Lao PDR",
-  //     grantName: "Global Civil Registration and Vital Statistics Advisory Services Analytics (P165691)",
-  //     region: "Global",
+  //     grantName: "region  Civil Registration and Vital Statistics Advisory Services Analytics (P165691)",
+  //     region: "region ",
   //     trustee: "TF072713",
   //     id: "P165691",
   //     execution: "Bank Executed (BE)",
@@ -536,7 +536,7 @@ export const grantsData = [
   //   {
   //     country: "Cambodia",
   //     grantName: "Cambodia Jobs Diagnostic: Toward an Enterprise-Driven Skills Development Agenda",
-  //     region: "EAP",
+  //     region: "region 3",
   //     trustee: "TF072713",
   //     id: "P165080",
   //     execution: "Bank Executed (BE)",
@@ -548,7 +548,7 @@ export const grantsData = [
   //   {
   //     country: "Vietnam",
   //     grantName: "Vietnam – Improving Education and Training for the World of Work",
-  //     region: "EAP",
+  //     region: "region 3",
   //     trustee: "TF072713",
   //     id: "P165479",
   //     execution: "Bank Executed (BE)",
@@ -560,7 +560,7 @@ export const grantsData = [
   //   {
   //     country: "Senegal, Mali, Guinea, Guinea Bissau and Gambia",
   //     grantName: "Preparation of the Regional Electricity access project",
-  //     region: "AFR",
+  //     region: "region 4",
   //     trustee: "TF072713",
   //     id: "P164044",
   //     execution: "Bank Executed (BE)",
@@ -583,8 +583,8 @@ export const grantsData = [
   //   },
   //   {
   //     country: "Burundi, Democratic Republic of Congo, Cameroon, Kenya, Uganda, Tanzania, Rwanda, Republic of Congo",
-  //     grantName: "Developing a Regional Approach for Agricultural Transformation in Eastern and Central Africa",
-  //     region: "AFR",
+  //     grantName: "Developing a Regional Approach for Agricultural Transformation in Eastern and Central region 4ica",
+  //     region: "region 4",
   //     trustee: "TF072713",
   //     id: "P162416",
   //     execution: "Bank Executed (BE)",
@@ -596,7 +596,7 @@ export const grantsData = [
   //   {
   //     country: "Bangladesh, India, Sri Lanka, Tunisia",
   //     grantName: "Korea-WB Smart City Partnership Program",
-  //     region: "Global",
+  //     region: "region ",
   //     trustee: "TF072713",
   //     id: "",
   //     execution: "Bank Executed (BE)",
@@ -608,7 +608,7 @@ export const grantsData = [
   //   {
   //     country: "Tanzania",
   //     grantName: "Tanzania: Supporting ICT-based Urban Governance System",
-  //     region: "AFR",
+  //     region: "region 4",
   //     trustee: "TF072713",
   //     id: "P166721",
   //     execution: "Bank Executed (BE)",
@@ -620,7 +620,7 @@ export const grantsData = [
   //   {
   //     country: "Peru",
   //     grantName: "Peru: Reforming Social Health Insurance",
-  //     region: "LAC",
+  //     region: "region 1",
   //     trustee: "TF072713",
   //     id: "P166491",
   //     execution: "Bank Executed (BE)",
@@ -630,9 +630,9 @@ export const grantsData = [
   //     disbursement: 499298.93
   //   },
   //   {
-  //     country: "Global",
+  //     country: "region ",
   //     grantName: "EDCF-KEXIM Cofinancing Pipeline Development",
-  //     region: "Global",
+  //     region: "region ",
   //     trustee: "TF072053",
   //     id: "",
   //     execution: "Bank Executed (BE)",
@@ -643,8 +643,8 @@ export const grantsData = [
   //   },
   //   {
   //     country: "Nicaragua, El Salvador, and Honduras",
-  //     grantName: "LAC Health Statistics Capacity Building for Policy Making",
-  //     region: "LAC",
+  //     grantName: "region 1 Health Statistics Capacity Building for Policy Making",
+  //     region: "region 1",
   //     trustee: "TF072713",
   //     id: "P166462",
   //     execution: "Bank Executed (BE)",
@@ -668,7 +668,7 @@ export const grantsData = [
   //   {
   //     country: "Sierra Leone",
   //     grantName: "Sierra Leone: Designing public spaces as productive economic assets through tourism",
-  //     region: "AFR",
+  //     region: "region 4",
   //     trustee: "TF072713",
   //     id: "P164212",
   //     execution: "Bank Executed (BE)",
@@ -679,8 +679,8 @@ export const grantsData = [
   //   },
   //   {
   //     country: "Benin, Cameroon, Cote d’Ivoire, Ghana, Kenya, Malawi, Mozambique",
-  //     grantName: "Africa: Strengthening Agricultural Higher Education in Africa",
-  //     region: "AFR",
+  //     grantName: "region 4ica: Strengthening Agricultural Higher Education in region 4ica",
+  //     region: "region 4",
   //     trustee: "TF072713",
   //     id: "P164702",
   //     execution: "Bank Executed (BE)",
@@ -692,7 +692,7 @@ export const grantsData = [
   //   {
   //     country: "Malawi, Mozambique",
   //     grantName: "Preparation of the Malawi Energy Portfolio Projects: Mozambique-Malawi Regional Interconnector Project",
-  //     region: "AFR",
+  //     region: "region 4",
   //     trustee: "TF072713",
   //     id: "P164354",
   //     execution: "Bank Executed (BE)",
@@ -704,7 +704,7 @@ export const grantsData = [
   //   {
   //     country: "Malawi",
   //     grantName: "Preparation of the Malawi Energy Portfolio Projects: Malawi - Electricity Access Project",
-  //     region: "AFR",
+  //     region: "region 4",
   //     trustee: "TF072713",
   //     id: "P164331",
   //     execution: "Bank Executed (BE)",
@@ -716,7 +716,7 @@ export const grantsData = [
   //   {
   //     country: "Kyrgyz Republic",
   //     grantName: "Kyrgyz Republic: Integrated Regional Development and Transport in Issyk-Kul",
-  //     region: "ECA",
+  //     region: "region 5",
   //     trustee: "TF072713",
   //     id: "P159220",
   //     execution: "Bank Executed (BE)",
@@ -728,7 +728,7 @@ export const grantsData = [
   //   {
   //     country: "Malawi",
   //     grantName: "Preparation of the Malawi Energy Portfolio Projects: Mpatamanga Hydropower Project",
-  //     region: "AFR",
+  //     region: "region 4",
   //     trustee: "TF072713",
   //     id: "P165704",
   //     execution: "Bank Executed (BE)",
@@ -738,9 +738,9 @@ export const grantsData = [
   //     disbursement: 648237.79
   //   },
   //   {
-  //     country: "Global",
+  //     country: "region ",
   //     grantName: "CYBERCRIME CAPACITY BUILDING II",
-  //     region: "Global",
+  //     region: "region ",
   //     trustee: "TF072713",
   //     id: "P167118",
   //     execution: "Bank Executed (BE)",
@@ -751,8 +751,8 @@ export const grantsData = [
   //   },
   //   {
   //     country: "Mauritania, Senegal, Cote d’Ivoire, Togo, and Benin",
-  //     grantName: "Additional Financing - West Africa Coastal Areas Resilience Investment Project",
-  //     region: "AFR",
+  //     grantName: "Additional Financing - West region 4ica Coastal Areas Resilience Investment Project",
+  //     region: "region 4",
   //     trustee: "TF072713",
   //     id: "P162337",
   //     execution: "Bank Executed (BE)",
@@ -776,7 +776,7 @@ export const grantsData = [
   //   {
   //     country: "Guinea, Mali",
   //     grantName: "Guinea and Mali: Integrating Solar Energy into the National Grids",
-  //     region: "AFR",
+  //     region: "region 4",
   //     trustee: "TF072713",
   //     id: "P166042",
   //     execution: "Bank Executed (BE)",
@@ -786,9 +786,9 @@ export const grantsData = [
   //     disbursement: 524065.25
   //   },
   //   {
-  //     country: "Global",
+  //     country: "region ",
   //     grantName: "Preparing for the 4IR: The future of skills development and job creation in East Asia (P168234)",
-  //     region: "EAP",
+  //     region: "region 3",
   //     trustee: "TF072713",
   //     id: "P168234",
   //     execution: "Bank Executed (BE)",
@@ -800,7 +800,7 @@ export const grantsData = [
   //   {
   //     country: "Ecuador",
   //     grantName: "Pilot Program to Test Virtual Reality Training Programs for Technological and Technical courses in Higher Education",
-  //     region: "LAC",
+  //     region: "region 1",
   //     trustee: "TF072713",
   //     id: "P167854",
   //     execution: "Bank Executed (BE)",
@@ -812,7 +812,7 @@ export const grantsData = [
   //   {
   //     country: "Kenya",
   //     grantName: "Improving Quality of Care and Health Care Systems in Kenya – Support to national scale-up, lessons and knowledge outputs",
-  //     region: "AFR",
+  //     region: "region 4",
   //     trustee: "TF072713",
   //     id: "P149879",
   //     execution: "Bank Executed (BE)",
@@ -823,8 +823,8 @@ export const grantsData = [
   //   },
   //   {
   //     country: "Ethiopia, Zambia, Nigeria, Gabon, Kenya, Egypt ",
-  //     grantName: "Africa CDC: strengthening regional public health institutions and capacity for surveillance and response",
-  //     region: "AFR",
+  //     grantName: "region 4ica CDC: strengthening regional public health institutions and capacity for surveillance and response",
+  //     region: "region 4",
   //     trustee: "TF072713",
   //     id: "P168268",
   //     execution: "Bank Executed (BE)",
@@ -836,7 +836,7 @@ export const grantsData = [
   //   {
   //     country: "Vietnam",
   //     grantName: "Indonesia and Vietnam - Drones for Smallholders",
-  //     region: "EAP",
+  //     region: "region 3",
   //     trustee: "TF072713",
   //     id: "IFC-00603406",
   //     execution: "Bank Executed (BE)",
@@ -870,9 +870,9 @@ export const grantsData = [
   //     disbursement: 799016.99
   //   },
   //   {
-  //     country: "Global",
+  //     country: "region ",
   //     grantName: "KWPF Program Management and Administration",
-  //     region: "Global",
+  //     region: "region ",
   //     trustee: "TF072713",
   //     id: "P144086",
   //     execution: "Bank Executed (BE)",
@@ -896,7 +896,7 @@ export const grantsData = [
   //   {
   //     country: "Indonesia",
   //     grantName: "Strengthening Skills Development for Better Employment Opportunities in Indonesia",
-  //     region: "EAP",
+  //     region: "region 3",
   //     trustee: "TF072713",
   //     id: "P169201",
   //     execution: "Bank Executed (BE)",
@@ -908,7 +908,7 @@ export const grantsData = [
   //   {
   //     country: "Ecuador",
   //     grantName: "Road Safety in Quito Metro Project",
-  //     region: "LAC",
+  //     region: "region 1",
   //     trustee: "TF072713",
   //     id: "P144489",
   //     execution: "Bank Executed (BE)",
@@ -920,7 +920,7 @@ export const grantsData = [
   //   {
   //     country: "Uzbekistan",
   //     grantName: "Preparation Studies for Digital CASA Uzbekistan",
-  //     region: "ECA",
+  //     region: "region 5",
   //     trustee: "TF072713",
   //     id: "P168615",
   //     execution: "Bank Executed (BE)",
@@ -944,7 +944,7 @@ export const grantsData = [
   //   {
   //     country: "Honduras",
   //     grantName: "Improving Service Delivery through Enhanced Identification",
-  //     region: "LAC",
+  //     region: "region 1",
   //     trustee: "TF072713",
   //     id: "P168618",
   //     execution: "Bank Executed (BE)",
@@ -954,9 +954,9 @@ export const grantsData = [
   //     disbursement: 258249.94
   //   },
   //   {
-  //     country: "Africa (Nigeria, Kenya, South Africa) and East Asia (Indonesia, Vietnam)",
-  //     grantName: "AFR and EAP Digital Entre. Ecosystem Diagnostics",
-  //     region: "Global",
+  //     country: "region 4ica (Nigeria, Kenya, South region 4ica) and East Asia (Indonesia, Vietnam)",
+  //     grantName: "region 4 and region 3 Digital Entre. Ecosystem Diagnostics",
+  //     region: "region ",
   //     trustee: "TF072713",
   //     id: "P169557",
   //     execution: "Bank Executed (BE)",
@@ -980,7 +980,7 @@ export const grantsData = [
   //   {
   //     country: "Kenya",
   //     grantName: "Kenya: Accelerating Disruptive Technology innovations across Agriculture & Food Systems",
-  //     region: "AFR",
+  //     region: "region 4",
   //     trustee: "TF072713",
   //     id: "P153349",
   //     execution: "Bank Executed (BE)",
@@ -992,7 +992,7 @@ export const grantsData = [
   //   {
   //     country: "Mozambique",
   //     grantName: "Mozambique: Leveraging ICTs to improve access to services and markets for vulnerable youth",
-  //     region: "AFR",
+  //     region: "region 4",
   //     trustee: "TF072713",
   //     id: "P166100",
   //     execution: "Bank Executed (BE)",
@@ -1004,7 +1004,7 @@ export const grantsData = [
   //   {
   //     country: "Turkey, Vietnam, Mauritania and Ethiopia",
   //     grantName: "Scaling Eco-Industrial Park Technologies",
-  //     region: "Global",
+  //     region: "region ",
   //     trustee: "TF072713",
   //     id: "IFC-00603797",
   //     execution: "Bank Executed (BE)",
@@ -1016,7 +1016,7 @@ export const grantsData = [
   //   {
   //     country: "Nigeria",
   //     grantName: "Nigeria: Using ICT-based Integrated Water Management Systems to Increase Sustainability in the Rural Water Sector",
-  //     region: "AFR",
+  //     region: "region 4",
   //     trustee: "TF072713",
   //     id: "P170510",
   //     execution: "Bank Executed (BE)",
@@ -1027,8 +1027,8 @@ export const grantsData = [
   //   },
   //   {
   //     country: "Albania, Kosovo, Montenegro, and Serbia",
-  //     grantName: "Global Cybersecurity Capacity Program II",
-  //     region: "Global",
+  //     grantName: "region  Cybersecurity Capacity Program II",
+  //     region: "region ",
   //     trustee: "TF072713",
   //     id: "P170374",
   //     execution: "Bank Executed (BE)",
@@ -1040,7 +1040,7 @@ export const grantsData = [
   //   {
   //     country: "Ukraine, Belarus",
   //     grantName: "Ukraine and Belarus: Improving Strategic Purchasing by Defining Guaranteed Health Benefits Package in Ukraine and Introducing DRGs in Belarus",
-  //     region: "ECA",
+  //     region: "region 5",
   //     trustee: "TF072713",
   //     id: "P170321",
   //     execution: "Bank Executed (BE)",
@@ -1052,7 +1052,7 @@ export const grantsData = [
   //   {
   //     country: "Egypt",
   //     grantName: "Egypt CleanTech Entrepreneurship",
-  //     region: "MENA",
+  //     region: "region 2",
   //     trustee: "TF072713",
   //     id: "IFC-00601695",
   //     execution: "Bank Executed (BE)",
@@ -1074,9 +1074,9 @@ export const grantsData = [
   //     disbursement: 647493.6
   //   },
   //   {
-  //     country: "Global",
+  //     country: "region ",
   //     grantName: "ICT Entrepreneurship & Business Start-up Support Program in Developing and FCV Countries (P168424)",
-  //     region: "Global",
+  //     region: "region ",
   //     trustee: "TF072713",
   //     id: "P168424",
   //     execution: "Bank Executed (BE)",
@@ -1088,7 +1088,7 @@ export const grantsData = [
   //   {
   //     country: "Armenia, Georgia,  Azerbaijan ",
   //     grantName: "South Caucasus: Strengthening the strategic purchasing of health care services to improve health system efficiency and equity",
-  //     region: "ECA",
+  //     region: "region 5",
   //     trustee: "TF072713",
   //     id: "P170294",
   //     execution: "Bank Executed (BE)",
@@ -1100,7 +1100,7 @@ export const grantsData = [
   //   {
   //     country: "Vietnam, Indonesia and The Philippines",
   //     grantName: "Innovation policy learning from Korea: lessons for their design and execution in emerging economies (P170310)",
-  //     region: "Global",
+  //     region: "region ",
   //     trustee: "TF072713",
   //     id: "P170310",
   //     execution: "Bank Executed (BE)",
@@ -1111,8 +1111,8 @@ export const grantsData = [
   //   },
   //   {
   //     country: "Brazil, Senegal and Vietnam",
-  //     grantName: "Global: Technology Adoption in an Era of a New Industrial Revolution",
-  //     region: "Global",
+  //     grantName: "region : Technology Adoption in an Era of a New Industrial Revolution",
+  //     region: "region ",
   //     trustee: "TF072713",
   //     id: "P170882",
   //     execution: "Bank Executed (BE)",
@@ -1122,9 +1122,9 @@ export const grantsData = [
   //     disbursement: 749117.2
   //   },
   //   {
-  //     country: "Global",
-  //     grantName: "Leveraging Korea’s Technical Assistance and Capacity building to improve digital development in ACE relevant Institutions in Africa",
-  //     region: "AFR",
+  //     country: "region ",
+  //     grantName: "Leveraging Korea’s Technical Assistance and Capacity building to improve digital development in ACE relevant Institutions in region 4ica",
+  //     region: "region 4",
   //     trustee: "TF072713",
   //     id: "P170486",
   //     execution: "Bank Executed (BE)",
@@ -1159,8 +1159,8 @@ export const grantsData = [
   //   },
   //   {
   //     country: "Nigeria",
-  //     grantName: "Nigeria: Global Skills for a Mobile Workforce",
-  //     region: "AFR",
+  //     grantName: "Nigeria: region  Skills for a Mobile Workforce",
+  //     region: "region 4",
   //     trustee: "TF072713",
   //     id: "P170964",
   //     execution: "Bank Executed (BE)",
@@ -1184,7 +1184,7 @@ export const grantsData = [
   //   {
   //     country: "Vietnam, Panama",
   //     grantName: "Smart Mobility Implementation Guidelines for Bank Client Countries",
-  //     region: "Global",
+  //     region: "region ",
   //     trustee: "TF072713",
   //     id: "P170753",
   //     execution: "Bank Executed (BE)",
@@ -1196,7 +1196,7 @@ export const grantsData = [
   //   {
   //     country: "Belarus, Georgia, Romania, and Ukraine",
   //     grantName: "Shifting Production Frontiers: Delivering Inclusive Training along the Lifecycle",
-  //     region: "ECA",
+  //     region: "region 5",
   //     trustee: "TF072713",
   //     id: "P170747",
   //     execution: "Bank Executed (BE)",
@@ -1208,7 +1208,7 @@ export const grantsData = [
   //   {
   //     country: "Kyrgyz Republic",
   //     grantName: "Kyrgyz Republic: Co-Financing Digital CASA-Kyrgyz Republic Project: Cyber Resilience Program",
-  //     region: "ECA",
+  //     region: "region 5",
   //     trustee: "TF072713",
   //     id: "P160230",
   //     execution: "Bank Executed (BE)",
@@ -1220,7 +1220,7 @@ export const grantsData = [
   //   {
   //     country: "Papua New Guinea",
   //     grantName: "PNG: Accelerate SME Innovations and Finance",
-  //     region: "EAP",
+  //     region: "region 3",
   //     trustee: "TF072713",
   //     id: "P172544",
   //     execution: "Bank Executed (BE)",
@@ -1268,7 +1268,7 @@ export const grantsData = [
   //   {
   //     country: "Lao PDR",
   //     grantName: "Lao PDR: Digitalization of Land Administration",
-  //     region: "EAP",
+  //     region: "region 3",
   //     trustee: "TF072713",
   //     id: "P169669",
   //     execution: "Bank Executed (BE)",
@@ -1302,9 +1302,9 @@ export const grantsData = [
   //     disbursement: 428471.69
   //   },
   //   {
-  //     country: "Global",
+  //     country: "region ",
   //     grantName: "Innovation policy learning from Korea II: disseminating practical lessons and providing guidance to policy makers in emerging economies",
-  //     region: "Global",
+  //     region: "region ",
   //     trustee: "TF072713",
   //     id: "P170310",
   //     execution: "Bank Executed (BE)",
@@ -1326,9 +1326,9 @@ export const grantsData = [
   //     disbursement: 481957.33
   //   },
   //   {
-  //     country: "Global",
-  //     grantName: "Global: Korea-World Bank Smart City Partnership Program-Phase 2",
-  //     region: "Global",
+  //     country: "region ",
+  //     grantName: "region : Korea-World Bank Smart City Partnership Program-Phase 2",
+  //     region: "region ",
   //     trustee: "TF072713",
   //     id: "P174433",
   //     execution: "Bank Executed (BE)",
@@ -1340,7 +1340,7 @@ export const grantsData = [
   //   {
   //     country: "Senegal",
   //     grantName: "Senegal Data-Driven Innovation in the Tourism Industry",
-  //     region: "AFR",
+  //     region: "region 4",
   //     trustee: "TF072713",
   //     id: "P146469",
   //     execution: "Bank Executed (BE)",
@@ -1352,7 +1352,7 @@ export const grantsData = [
   //   {
   //     country: "Kyrgyz Republic",
   //     grantName: "Kyrgyz Republic: Supporting COVID-19 Response",
-  //     region: "ECA",
+  //     region: "region 5",
   //     trustee: "TF072713",
   //     id: "P173766",
   //     execution: "Bank Executed (BE)",
@@ -1362,9 +1362,9 @@ export const grantsData = [
   //     disbursement: 124784.25
   //   },
   //   {
-  //     country: "LAC",
+  //     country: "region 1",
   //     grantName: "Learning from the South Korean Experience to Save Lives: Real Time Benchmarking of Policy Responses to COVID-19 with Countries from the Latin American and Caribbean Region",
-  //     region: "LAC",
+  //     region: "region 1",
   //     trustee: "TF072713",
   //     id: "P174597",
   //     execution: "Bank Executed (BE)",
@@ -1376,7 +1376,7 @@ export const grantsData = [
   //   {
   //     country: "Uzbekistan",
   //     grantName: "Uzbekistan: Supporting COVID-19 Response",
-  //     region: "ECA",
+  //     region: "region 5",
   //     trustee: "TF072713",
   //     id: "P173827",
   //     execution: "Bank Executed (BE)",
@@ -1388,7 +1388,7 @@ export const grantsData = [
   //   {
   //     country: "Philippines",
   //     grantName: "Philippines: the Future of Jobs",
-  //     region: "EAP",
+  //     region: "region 3",
   //     trustee: "TF072713",
   //     id: "P173234",
   //     execution: "Bank Executed (BE)",
@@ -1400,7 +1400,7 @@ export const grantsData = [
   //   {
   //     country: "Kyrgyz Republic",
   //     grantName: "Kyrgyz Republic – Lifelong Learners",
-  //     region: "ECA",
+  //     region: "region 5",
   //     trustee: "TF072713",
   //     id: "P170542",
   //     execution: "Bank Executed (BE)",
@@ -1410,9 +1410,9 @@ export const grantsData = [
   //     disbursement: 854480.6
   //   },
   //   {
-  //     country: "Global",
+  //     country: "region ",
   //     grantName: "HNP Programmatic Technical Assistance for Tackling COVID-19",
-  //     region: "Global",
+  //     region: "region ",
   //     trustee: "TF072713",
   //     id: "P174615",
   //     execution: "Bank Executed (BE)",
@@ -1424,7 +1424,7 @@ export const grantsData = [
   //   {
   //     country: "Ghana",
   //     grantName: "Sustainable financing for primary health care in Ghana",
-  //     region: "AFR",
+  //     region: "region 4",
   //     trustee: "TF072713",
   //     id: "P173966",
   //     execution: "Bank Executed (BE)",
@@ -1434,9 +1434,9 @@ export const grantsData = [
   //     disbursement: 848835.02
   //   },
   //   {
-  //     country: "Global",
+  //     country: "region ",
   //     grantName: "Access to Justice and Technology: Using ICT to Close the Justice Gap",
-  //     region: "Global",
+  //     region: "region ",
   //     trustee: "TF072713",
   //     id: "P174073",
   //     execution: "Bank Executed (BE)",
@@ -1448,7 +1448,7 @@ export const grantsData = [
   //   {
   //     country: "Tanzania",
   //     grantName: "GIS-BASED REVENUE COLLECTION SYSTEM AND GEOSPATIAL DATA INFRASTRUCTURE IN ZANZIBAR",
-  //     region: "AFR",
+  //     region: "region 4",
   //     trustee: "TF072713",
   //     id: "P166721",
   //     execution: "Bank Executed (BE)",
@@ -1460,7 +1460,7 @@ export const grantsData = [
   //   {
   //     country: "Mongolia",
   //     grantName: "The Future of Jobs and Skills in Mongolia",
-  //     region: "EAP",
+  //     region: "region 3",
   //     trustee: "TF072713",
   //     id: "P174453",
   //     execution: "Bank Executed (BE)",
@@ -1472,7 +1472,7 @@ export const grantsData = [
   //   {
   //     country: "Uganda",
   //     grantName: "ACDP - Disruptive Agricultural Technology Project",
-  //     region: "AFR",
+  //     region: "region 4",
   //     trustee: "TF072713",
   //     id: "P145037",
   //     execution: "Bank Executed (BE)",
@@ -1496,7 +1496,7 @@ export const grantsData = [
   //   {
   //     country: "Ukraine",
   //     grantName: "Smart City and Traffic Management for Kyiv",
-  //     region: "ECA",
+  //     region: "region 5",
   //     trustee: "TF072713",
   //     id: "P173957",
   //     execution: "Bank Executed (BE)",
@@ -1520,7 +1520,7 @@ export const grantsData = [
   //   {
   //     country: "Bulgaria",
   //     grantName: "Bulgaria eGov Transformation",
-  //     region: "ECA",
+  //     region: "region 5",
   //     trustee: "TF072713",
   //     id: "P174293",
   //     execution: "Bank Executed (BE)",
@@ -1542,9 +1542,9 @@ export const grantsData = [
   //     disbursement: 549531.06
   //   },
   //   {
-  //     country: "Global",
+  //     country: "region ",
   //     grantName: "Development of Digital Government Toolkit to Complement Covid-19 Responses",
-  //     region: "Global",
+  //     region: "region ",
   //     trustee: "TF072713",
   //     id: "P174493",
   //     execution: "Bank Executed (BE)",
@@ -1556,7 +1556,7 @@ export const grantsData = [
   //   {
   //     country: "Senegal",
   //     grantName: "Senegal: Improving quality and recognition of non-formal learning",
-  //     region: "AFR",
+  //     region: "region 4",
   //     trustee: "TF072713",
   //     id: "P167681",
   //     execution: "Bank Executed (BE)",
@@ -1568,7 +1568,7 @@ export const grantsData = [
   //   {
   //     country: "Lao PDR",
   //     grantName: "Korea-Lao PDR Partnership for Improved Skills Development and Job Matching",
-  //     region: "EAP",
+  //     region: "region 3",
   //     trustee: "TF072713",
   //     id: "P174731",
   //     execution: "Bank Executed (BE)",
@@ -1578,9 +1578,9 @@ export const grantsData = [
   //     disbursement: 669812.28
   //   },
   //   {
-  //     country: "Global",
-  //     grantName: "Food Forward: Global Knowledge, Data and Partnerships for Catalyzing Digital Agriculture",
-  //     region: "Global",
+  //     country: "region ",
+  //     grantName: "Food Forward: region  Knowledge, Data and Partnerships for Catalyzing Digital Agriculture",
+  //     region: "region ",
   //     trustee: "TF072713",
   //     id: "P176720",
   //     execution: "Bank Executed (BE)",
@@ -1592,7 +1592,7 @@ export const grantsData = [
   //   {
   //     country: "Honduras",
   //     grantName: "Honduras: Improving Service Delivery through Enhanced Identification",
-  //     region: "LAC",
+  //     region: "region 1",
   //     trustee: "TF072713",
   //     id: "P175733",
   //     execution: "Bank Executed (BE)",
@@ -1604,7 +1604,7 @@ export const grantsData = [
   //   {
   //     country: "Kenya",
   //     grantName: "Supporting Infrastructure and Policy Development for Kenya’s Digital Transformation",
-  //     region: "AFR",
+  //     region: "region 4",
   //     trustee: "TF072713",
   //     id: "P170941",
   //     execution: "Bank Executed (BE)",
@@ -1615,8 +1615,8 @@ export const grantsData = [
   //   },
   //   {
   //     country: "Ecuador",
-  //     grantName: "Developing LAC’s capacity to develop Virtual Laboratories for technical and technological education amid COVID-19",
-  //     region: "LAC",
+  //     grantName: "Developing region 1’s capacity to develop Virtual Laboratories for technical and technological education amid COVID-19",
+  //     region: "region 1",
   //     trustee: "TF072713",
   //     id: "P176832",
   //     execution: "Bank Executed (BE)",
@@ -1628,7 +1628,7 @@ export const grantsData = [
   //   {
   //     country: "Indonesia",
   //     grantName: "Leveraging ICT-based Land and Property Valuation in ASEAN Countries",
-  //     region: "EAP",
+  //     region: "region 3",
   //     trustee: "TF072713",
   //     id: "P176933",
   //     execution: "Bank Executed (BE)",
@@ -1640,7 +1640,7 @@ export const grantsData = [
   //   {
   //     country: "Sierra Leone",
   //     grantName: "Strengthening Skills Development in Sierra Leone",
-  //     region: "AFR",
+  //     region: "region 4",
   //     trustee: "TF072713",
   //     id: "P163723",
   //     execution: "Bank Executed (BE)",
@@ -1652,7 +1652,7 @@ export const grantsData = [
   //   {
   //     country: "Tanzania",
   //     grantName: "Tanzania: E-governance for Land Administration",
-  //     region: "AFR",
+  //     region: "region 4",
   //     trustee: "TF072713",
   //     id: "P176685",
   //     execution: "Bank Executed (BE)",
@@ -1664,7 +1664,7 @@ export const grantsData = [
   //   {
   //     country: "Mozambique",
   //     grantName: "Mozambique Economic Linkages for Diversification (EL4D)",
-  //     region: "AFR",
+  //     region: "region 4",
   //     trustee: "TF072713",
   //     id: "P171664",
   //     execution: "Bank Executed (BE)",
@@ -1674,9 +1674,9 @@ export const grantsData = [
   //     disbursement: 613387.58
   //   },
   //   {
-  //     country: "Global",
+  //     country: "region ",
   //     grantName: "PROMOTING CORPORATE INTEGRITY COMPLIANCE VIA AN INTEGRITY COMPLIANCE TRAINING PLATFORM (P176886)",
-  //     region: "Global",
+  //     region: "region ",
   //     trustee: "TF072713",
   //     id: "P176886",
   //     execution: "Bank Executed (BE)",
@@ -1688,7 +1688,7 @@ export const grantsData = [
   //   {
   //     country: "Saint Lucia, Saint Vincent and the Grenadines",
   //     grantName: "Saint Lucia & Saint Vincent and the Grenadines: Accelerating Progress towards UHC in the Era of COVID-19",
-  //     region: "LAC",
+  //     region: "region 1",
   //     trustee: "TF072713",
   //     id: "P176662",
   //     execution: "Bank Executed (BE)",
@@ -1700,7 +1700,7 @@ export const grantsData = [
   //   {
   //     country: "Morocco",
   //     grantName: "Morocco: Development of the Blue Economy Program",
-  //     region: "MENA",
+  //     region: "region 2",
   //     trustee: "TF072713",
   //     id: "P172926",
   //     execution: "Bank Executed (BE)",
@@ -1712,7 +1712,7 @@ export const grantsData = [
   //   {
   //     country: "Morocco",
   //     grantName: "Support for Digital and Climate-Smart Agriculture",
-  //     region: "MENA",
+  //     region: "region 2",
   //     trustee: "TF072713",
   //     id: "P170419",
   //     execution: "Bank Executed (BE)",
@@ -1724,7 +1724,7 @@ export const grantsData = [
   //   {
   //     country: "Indonesia",
   //     grantName: "Eastern Indonesia Port-Led Development Project Preparation Support BETF",
-  //     region: "EAP",
+  //     region: "region 3",
   //     trustee: "TF072713",
   //     id: "P173879",
   //     execution: "Bank Executed (BE)",
@@ -1734,9 +1734,9 @@ export const grantsData = [
   //     disbursement: 279568.78
   //   },
   //   {
-  //     country: "Global",
-  //     grantName: "Global Data Regulation Diagnostic",
-  //     region: "Global",
+  //     country: "region ",
+  //     grantName: "region  Data Regulation Diagnostic",
+  //     region: "region ",
   //     trustee: "TF072713",
   //     id: "P176866",
   //     execution: "Bank Executed (BE)",
@@ -1747,8 +1747,8 @@ export const grantsData = [
   //   },
   //   {
   //     country: "Colombia, Peru",
-  //     grantName: "Benchmarking of Policy Responses to COVID-19 LAC",
-  //     region: "LAC",
+  //     grantName: "Benchmarking of Policy Responses to COVID-19 region 1",
+  //     region: "region 1",
   //     trustee: "TF072713",
   //     id: "P174597",
   //     execution: "Bank Executed (BE)",
@@ -1760,7 +1760,7 @@ export const grantsData = [
   //   {
   //     country: "Uzbekistan",
   //     grantName: "Uzbekistan: ICT Platform for Forest Landscape Restoration",
-  //     region: "ECA",
+  //     region: "region 5",
   //     trustee: "TF072713",
   //     id: "P174135",
   //     execution: "Recipient Executed (RE)",
@@ -1772,7 +1772,7 @@ export const grantsData = [
   //   {
   //     country: "Indonesia",
   //     grantName: "Technical Support to Indonesia Mass Transit Project",
-  //     region: "EAP",
+  //     region: "region 3",
   //     trustee: "TF072713",
   //     id: "P169548",
   //     execution: "Bank Executed (BE)",
@@ -1796,7 +1796,7 @@ export const grantsData = [
   //   {
   //     country: "Mongolia",
   //     grantName: "(Mongolia) Intelligent Transport System for Ulaanbaatar Sustainable Urban Transport RETF",
-  //     region: "EAP",
+  //     region: "region 3",
   //     trustee: "TF072713",
   //     id: "P174007",
   //     execution: "Hybrid (RE)",
@@ -1820,7 +1820,7 @@ export const grantsData = [
   //   {
   //     country: "Mongolia",
   //     grantName: "Intelligent Transport System for Ulaanbaatar Sustainable Urban Transport (BETF)",
-  //     region: "EAP",
+  //     region: "region 3",
   //     trustee: "TF072713",
   //     id: "P174007",
   //     execution: "Hybrid (BE)",
@@ -1832,7 +1832,7 @@ export const grantsData = [
   //   {
   //     country: "Ecuador",
   //     grantName: "Ecuador: Road Safety with ITS in Quito Metro Project- phase 2",
-  //     region: "LAC",
+  //     region: "region 1",
   //     trustee: "TF072713",
   //     id: "P179175",
   //     execution: "Bank Executed (BE)",
@@ -1866,9 +1866,9 @@ export const grantsData = [
   //     disbursement: 600000.0
   //   },
   //   {
-  //     country: "Global",
+  //     country: "region ",
   //     grantName: "Data & Solutions for Future-Proofing the Cyber Environment",
-  //     region: "Global",
+  //     region: "region ",
   //     trustee: "TF072713",
   //     id: "P180299",
   //     execution: "Bank Executed (BE)",
@@ -1878,9 +1878,9 @@ export const grantsData = [
   //     disbursement: 386882.19
   //   },
   //   {
-  //     country: "Global",
+  //     country: "region ",
   //     grantName: "Scaling Eco-Industrial Park Technologies phase 2",
-  //     region: "Global",
+  //     region: "region ",
   //     trustee: "TF072713",
   //     id: "P179257",
   //     execution: "Bank Executed (BE)",
@@ -1892,7 +1892,7 @@ export const grantsData = [
   //   {
   //     country: "Mexico",
   //     grantName: "An Agri-tech Platform for Scaling Up Digital Innovation and Greening Agri-food and Financial Systems B/E",
-  //     region: "LAC",
+  //     region: "region 1",
   //     trustee: "TF072713",
   //     id: "P175940",
   //     execution: "Hybrid (BE)",
@@ -1904,7 +1904,7 @@ export const grantsData = [
   //   {
   //     country: "Peru",
   //     grantName: "Informing climate-smart and safe traffic management and sustainable transport interventions in Lima",
-  //     region: "LAC",
+  //     region: "region 1",
   //     trustee: "TF072713",
   //     id: "P178842",
   //     execution: "Bank Executed (BE)",
@@ -1914,9 +1914,9 @@ export const grantsData = [
   //     disbursement: 498421.82
   //   },
   //   {
-  //     country: "Global",
+  //     country: "region ",
   //     grantName: "Accelerating Data-Driven Development: One Country at a Time",
-  //     region: "Global",
+  //     region: "region ",
   //     trustee: "TF072713",
   //     id: "P178616",
   //     execution: "Bank Executed (BE)",
@@ -1927,8 +1927,8 @@ export const grantsData = [
   //   },
   //   {
   //     country: "CAR, Gabon, Nigeria, Cameroon",
-  //     grantName: "Central African Republic and Gabon: Improving Data Governance and Hosting",
-  //     region: "AFR",
+  //     grantName: "Central region 4ican Republic and Gabon: Improving Data Governance and Hosting",
+  //     region: "region 4",
   //     trustee: "TF072713",
   //     id: "P180082",
   //     execution: "Bank Executed (BE)",
@@ -1938,9 +1938,9 @@ export const grantsData = [
   //     disbursement: 260531.48
   //   },
   //   {
-  //     country: "Global",
+  //     country: "region ",
   //     grantName: "Indonesia: Digital Transformation for Inclusion and Better Service Delivery",
-  //     region: "EAP",
+  //     region: "region 3",
   //     trustee: "TF072713",
   //     id: "P179688",
   //     execution: "Bank Executed (BE)",
@@ -1964,7 +1964,7 @@ export const grantsData = [
   //   {
   //     country: "Madagascar",
   //     grantName: "Mobilizing blockchain-boosted vouchers for enhanced agricultural productivity in Madagascar",
-  //     region: "AFR",
+  //     region: "region 4",
   //     trustee: "TF072713",
   //     id: "P175269",
   //     execution: "Hybrid (BE)",
@@ -1988,7 +1988,7 @@ export const grantsData = [
   //   {
   //     country: "Philippines",
   //     grantName: "Digital Creative Industry: Philippines and Beyond",
-  //     region: "EAP",
+  //     region: "region 3",
   //     trustee: "TF072713",
   //     id: "P179766",
   //     execution: "Bank Executed (BE)",
@@ -1998,9 +1998,9 @@ export const grantsData = [
   //     disbursement: 897162.68
   //   },
   //   {
-  //     country: "Global",
-  //     grantName: "Korean Technology and Knowledge Transfer to Transform the Seaweed Agribusiness in Africa and Southeast Asia",
-  //     region: "Global",
+  //     country: "region ",
+  //     grantName: "Korean Technology and Knowledge Transfer to Transform the Seaweed Agribusiness in region 4ica and Southeast Asia",
+  //     region: "region ",
   //     trustee: "TF072713",
   //     id: "P175786",
   //     execution: "Bank Executed (BE)",
@@ -2012,7 +2012,7 @@ export const grantsData = [
   //   {
   //     country: "Indonesia, Kenya, Ghana and Mozambique",
   //     grantName: "Technology Adoption for Inclusive Growth",
-  //     region: "Global",
+  //     region: "region ",
   //     trustee: "TF072713",
   //     id: "P179766",
   //     execution: "Bank Executed (BE)",
@@ -2022,9 +2022,9 @@ export const grantsData = [
   //     disbursement: 197438.29
   //   },
   //   {
-  //     country: "Global",
-  //     grantName: "Follow-on Grant - (Global): Learning from Korea to Build Back Better, More Resilient Health Systems Post Pandemic",
-  //     region: "Global",
+  //     country: "region ",
+  //     grantName: "Follow-on Grant - (region ): Learning from Korea to Build Back Better, More Resilient Health Systems Post Pandemic",
+  //     region: "region ",
   //     trustee: "TF072713",
   //     id: "P502594",
   //     execution: "Bank Executed (BE)",
@@ -2048,7 +2048,7 @@ export const grantsData = [
   //   {
   //     country: "Ethiopia",
   //     grantName: "Ethiopia: Accelerating Agriculture and Food Systems Transformation for Food Security, Jobs Creation, Inclusive Growth, and Poverty Reduction",
-  //     region: "AFR",
+  //     region: "region 4",
   //     trustee: "TF072713",
   //     id: "P179473",
   //     execution: "Bank Executed (BE)",
@@ -2082,9 +2082,9 @@ export const grantsData = [
   //     disbursement: 272818.72
   //   },
   //   {
-  //     country: "Global",
+  //     country: "region ",
   //     grantName: "EDCF CO-FINANCING IMPLEMENTATION SUPPORT",
-  //     region: "Global",
+  //     region: "region ",
   //     trustee: "TF072713",
   //     id: "",
   //     execution: "Bank Executed (BE)",
@@ -2096,7 +2096,7 @@ export const grantsData = [
   //   {
   //     country: "Armenia",
   //     grantName: "Armenia - Technical Support for Universal Health Coverage Reforms",
-  //     region: "ECA",
+  //     region: "region 5",
   //     trustee: "TF072713",
   //     id: "P181001",
   //     execution: "Bank Executed (BE)",
@@ -2108,7 +2108,7 @@ export const grantsData = [
   //   {
   //     country: "Zambia ",
   //     grantName: "Technical Support for Drone Utilization in Public Health Supply Chain and Diagnostic Networks",
-  //     region: "AFR",
+  //     region: "region 4",
   //     trustee: "TF072713",
   //     id: "P181304",
   //     execution: "switched from Hybrid to Bank Executed (BE)",
@@ -2120,7 +2120,7 @@ export const grantsData = [
   //   {
   //     country: "Kenya",
   //     grantName: "Kenya: Digital Public Works for Urban Resilience",
-  //     region: "AFR",
+  //     region: "region 4",
   //     trustee: "TF072713",
   //     id: "P501345",
   //     execution: "switched from Hybrid to Bank Executed (BE)",
@@ -2132,7 +2132,7 @@ export const grantsData = [
   //   {
   //     country: "Vietnam",
   //     grantName: "Vietnam: Enhancing Flood Risk Management and Wastewater Services in Vinh Long City BETF",
-  //     region: "EAP",
+  //     region: "region 3",
   //     trustee: "TF072713",
   //     id: "P171700",
   //     execution: "switched from Hybrid to Bank Executed (BE)",
@@ -2144,7 +2144,7 @@ export const grantsData = [
   //   {
   //     country: "Vietnam",
   //     grantName: "Vietnam Improving strategic purchasing of hospital services",
-  //     region: "EAP",
+  //     region: "region 3",
   //     trustee: "TF072713",
   //     id: "P181325",
   //     execution: "Bank Executed (BE)",
@@ -2156,7 +2156,7 @@ export const grantsData = [
   //   {
   //     country: "Colombia",
   //     grantName: "Leveraging digital technologies to facilitate agricultural extension services in Colombia",
-  //     region: "LAC",
+  //     region: "region 1",
   //     trustee: "TF072713",
   //     id: "P180676",
   //     execution: "Hybrid (BE)",
@@ -2168,7 +2168,7 @@ export const grantsData = [
   //   {
   //     country: "Kyrgyz Republic",
   //     grantName: "KWPF - Kyrgyz Republic: ICT for Disaster Risk Management in Degraded Landscapes",
-  //     region: "ECA",
+  //     region: "region 5",
   //     trustee: "TF072713",
   //     id: "P177407",
   //     execution: "Recipient Executed (RE)",
@@ -2180,7 +2180,7 @@ export const grantsData = [
   //   {
   //     country: "Mozambique",
   //     grantName: "Evidence of TVET decision choices for low-income youth in Maputo: a social protection and transport approximation",
-  //     region: "AFR",
+  //     region: "region 4",
   //     trustee: "TF072713",
   //     id: "P500569",
   //     execution: "Bank Executed (BE)",
@@ -2192,7 +2192,7 @@ export const grantsData = [
   //   {
   //     country: "Vietnam",
   //     grantName: "Vietnam: Facilitating Low-Carbon and Green Agriculture Transformation",
-  //     region: "EAP",
+  //     region: "region 3",
   //     trustee: "TF072713",
   //     id: "P179549",
   //     execution: "switched from Hybrid to Bank Executed (BE)",
@@ -2204,7 +2204,7 @@ export const grantsData = [
   //   {
   //     country: "Kenya",
   //     grantName: "Kenya: Development of Smart Mobility Solution for Nairobi Metropolitan Area (BE)",
-  //     region: "AFR",
+  //     region: "region 4",
   //     trustee: "TF073874",
   //     id: "P176725",
   //     execution: "Hybrid (BE)",
@@ -2216,7 +2216,7 @@ export const grantsData = [
   //   {
   //     country: "Mauritania",
   //     grantName: "Mauritania Renewable Energy Storage and Digitalization Support",
-  //     region: "AFR",
+  //     region: "region 4",
   //     trustee: "TF073874",
   //     id: "P179383",
   //     execution: "Bank Executed (BE)",
@@ -2228,7 +2228,7 @@ export const grantsData = [
   //   {
   //     country: "Indonesia",
   //     grantName: "Indonesia: Improvement of Solid Waste Management Practices with Smart Technology",
-  //     region: "EAP",
+  //     region: "region 3",
   //     trustee: "TF073874",
   //     id: "P180270",
   //     execution: "Bank Executed (BE)",
@@ -2240,7 +2240,7 @@ export const grantsData = [
   //   {
   //     country: "Philippines",
   //     grantName: "The Philippines: Promoting innovation for smart urban management",
-  //     region: "EAP",
+  //     region: "region 3",
   //     trustee: "TF073874",
   //     id: "P502877",
   //     execution: "Bank Executed (BE)",
@@ -2250,9 +2250,9 @@ export const grantsData = [
   //     disbursement: 134226.27
   //   },
   //   {
-  //     country: "Global",
-  //     grantName: "Global: Korea-World Bank Smart City Partnership Program-Phase 3",
-  //     region: "Global",
+  //     country: "region ",
+  //     grantName: "region : Korea-World Bank Smart City Partnership Program-Phase 3",
+  //     region: "region ",
   //     trustee: "TF073874",
   //     id: "P181073",
   //     execution: "Bank Executed (BE)",
@@ -2288,7 +2288,7 @@ export const grantsData = [
   //   {
   //     country: "Morocco",
   //     grantName: "Morocco: Consolidating Universal Health Coverage Reform Achievements",
-  //     region: "MENA",
+  //     region: "region 2",
   //     trustee: "TF073874",
   //     id: "P507030",
   //     execution: "Bank Executed (BE)",
@@ -2300,7 +2300,7 @@ export const grantsData = [
   //   {
   //     country: "Kenya",
   //     grantName: "Public-Private Partnership facility for delivering AgTech startup ecosystem services - Knowledge and piloting in Kenya",
-  //     region: "AFR",
+  //     region: "region 4",
   //     trustee: "TF073874",
   //     id: "P179477",
   //     execution: "Bank Executed (BE)",
@@ -2312,7 +2312,7 @@ export const grantsData = [
   //   {
   //     country: "Brazil",
   //     grantName: "Brazil: Leveraging technology-driven solutions across the board for skills development and productive inclusive employment",
-  //     region: "LAC",
+  //     region: "region 1",
   //     trustee: "TF073874",
   //     id: "P506986",
   //     execution: "Bank Executed (BE)",
@@ -2324,7 +2324,7 @@ export const grantsData = [
   //   {
   //     country: "Madagascar, Zambia",
   //     grantName: "Evidence on home grown school feeding",
-  //     region: "AFR",
+  //     region: "region 4",
   //     trustee: "TF073874",
   //     id: "P507919",
   //     execution: "Bank Executed (BE)",
@@ -2336,7 +2336,7 @@ export const grantsData = [
   //   {
   //     country: "Kenya",
   //     grantName: "Kenya: Development of Smart Mobility Solution for Nairobi Metropolitan Area",
-  //     region: "AFR",
+  //     region: "region 4",
   //     trustee: "TF073874",
   //     id: "P176725",
   //     execution: "Hybrid (RE PPG #1)",
@@ -2348,7 +2348,7 @@ export const grantsData = [
   //   {
   //     country: "Ethiopia and Uganda",
   //     grantName: "Promoting CSA Practices by Optimizing PES using AI and other digital technologies.",
-  //     region: "AFR",
+  //     region: "region 4",
   //     trustee: "TF073874",
   //     id: "P508786",
   //     execution: "Bank Executed (BE)",
@@ -2360,7 +2360,7 @@ export const grantsData = [
   //   {
   //     country: "Costa Rica",
   //     grantName: "Costa Rica Advancing UHC by Supporting the CCSSs Strategic Use of Data and Information",
-  //     region: "LAC",
+  //     region: "region 1",
   //     trustee: "TF073874",
   //     id: "P507489",
   //     execution: "Bank Executed (BE)",
