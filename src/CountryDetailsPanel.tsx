@@ -1,40 +1,37 @@
-import React from 'react';
-import { grantsData } from './data/grantsData';
-import { motion } from 'framer-motion';
-import { useParams, useNavigate } from 'react-router-dom';
-import { ArrowLeft } from 'lucide-react';
-
+import React from "react";
+import { grantsData } from "./data/grantsData";
+import { motion } from "framer-motion";
+import { useParams, useNavigate } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
 
 const CountryDetailsPanel: React.FC = () => {
   const { countryName } = useParams();
   const navigate = useNavigate();
 
-  const decodedCountry = decodeURIComponent(countryName || '').trim();
+  const decodedCountry = decodeURIComponent(countryName || "").trim();
 
-  const filteredGrants = grantsData.filter((grant) =>
-    grant.country.toLowerCase().trim() === decodedCountry.toLowerCase()
+  const filteredGrants = grantsData.filter(
+    (grant) =>
+      grant.country.toLowerCase().trim() === decodedCountry.toLowerCase()
   );
 
   return (
     <motion.div
-      initial={{ opacity: 0, x: '100%' }}
+      initial={{ opacity: 0, x: "100%" }}
       animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: '100%' }}
+      exit={{ opacity: 0, x: "100%" }}
       transition={{ duration: 0.4 }}
       className="absolute top-0 left-0 w-full h-full bg-gray-900 text-white p-6 overflow-y-scroll z-50"
     >
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-2xl font-bold">Grants in {decodedCountry}</h2>
         <button
-  onClick={() => navigate('/')}
-  className="w-44 px-4 py-2 border border-white text-white rounded-md hover:bg-white hover:text-gray-900 transition duration-200 shadow-sm backdrop-blur-sm flex items-center justify-center gap-2"
->
-  <ArrowLeft className="w-4 h-4 text-white" />
-  <span>Back to Map</span>
-</button>
-
-
-
+          onClick={() => navigate("/")}
+          className="w-44 px-4 py-2 border border-white text-white rounded-md hover:bg-white hover:text-gray-900 transition duration-200 shadow-sm backdrop-blur-sm flex items-center justify-center gap-2"
+        >
+          <ArrowLeft className="w-4 h-4 text-white" />
+          <span>Back to Map</span>
+        </button>
       </div>
 
       <table className="w-full text-sm border border-gray-700">
@@ -63,15 +60,8 @@ const CountryDetailsPanel: React.FC = () => {
             filteredGrants.map((grant, idx) => (
               <tr key={idx} className="even:bg-gray-800">
                 <td className="p-2 border">{grant.country}</td>
-                <td className="p-2 border">{grant.grantName}</td>
+
                 <td className="p-2 border">{grant.region}</td>
-                <td className="p-2 border">{grant.trustee}</td>
-                <td className="p-2 border">{grant.projectId}</td>
-                <td className="p-2 border">{grant.execution}</td>
-                <td className="p-2 border">{grant.sector}</td>
-                <td className="p-2 border">{grant.approvalDate}</td>
-                <td className="p-2 border">${grant.grantAmount.toLocaleString()}</td>
-                <td className="p-2 border">${grant.disbursement.toLocaleString()}</td>
               </tr>
             ))
           )}

@@ -5,6 +5,6 @@ html, body, #root {
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: #0a1c2e;  /* Deep navy like your design */
+    background-color: #0a1c2e;  
     overflow: hidden;
   }

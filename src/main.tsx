@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import App from './App';
-import CountryDetailsPanel from './CountryDetailsPanel'; // already correct
+import CountryDetailsPanel from './CountryDetailsPanel'; 
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
